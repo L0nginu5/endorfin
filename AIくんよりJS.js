@@ -46,8 +46,12 @@ const renderTask = () => {
       renderTask(); // タスクを再描画する
     });
 
+    if (tasks.length > 0) {
+      renderTask(); // タスクを描画する
+    }
+    
     // 完了済みの場合はテキストに修飾を追加する
-    if (task.completed) {
+    if (task.completed != undefined && task.completed) {
       taskItem.classList.add("completed");
     }
 
